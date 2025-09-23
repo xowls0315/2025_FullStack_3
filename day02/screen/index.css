@@ -1,0 +1,25 @@
+.screen {
+  width: 100vw;
+  height: 70vh;
+  position: relative;
+}
+.screen > button {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* 오버레이: 처음엔 위(-100%)에 있다가, on 붙으면 0으로 내려옴 */
+.screen::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top/right/bottom/left: 0 */
+  background-color: skyblue;
+  transform: translateY(-100vh);
+  transition: transform 0.5s ease; /* 내려오는 애니메이션 */
+}
+.screen.show::before {
+  transform: translateY(0);
+}
