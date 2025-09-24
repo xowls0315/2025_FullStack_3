@@ -1,0 +1,10 @@
+section {
+  height: 100vh;
+  border: 3px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section > h1 {
+  font-size: 50px;
+}
