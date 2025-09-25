@@ -1,0 +1,13 @@
+.swiper {
+  width: 100vw;
+  height: 100vh; /* 화면 가득 */
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%; /* 각 슬라이드가 한 화면 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+}

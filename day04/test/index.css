@@ -1,0 +1,14 @@
+section {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  place-items: center;
+  border: 1px solid red;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  filter: blur(20px);
+}
