@@ -1,0 +1,35 @@
+// intersectionObserver
+const mobile = document.querySelector("#mobile");
+
+const keyframes = [
+  {
+    opacity: 0,
+    transform: "translateY(100px)",
+  },
+  {
+    opacity: 1,
+    transform: "translateY(0px)",
+  },
+];
+
+const option = {
+  duration: 500,
+  fill: "forwards",
+};
+
+const ob = new IntersectionObserver(
+  (entries, me) => {
+    entries.forEach((v) => {
+      if (v.isIntersecting) {
+        v.target.animate(keyframes, option);
+        me.unobserve(v.target);
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "0px 0px -50% 0px",
+    threshold: 0,
+  }
+);
+ob.observe(mobile);
